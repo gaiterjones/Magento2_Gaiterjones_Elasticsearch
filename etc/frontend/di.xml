@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Elasticsearch\Elasticsearch5\SearchAdapter\Mapper">
+        <plugin disabled="false" sortOrder="1" name="gaiterjones_elasticsearch_searchadapter_mapperplugin" type="Gaiterjones\Elasticsearch\Plugin\Elasticsearch5\SearchAdapter\MapperPlugin"/>
+    </type>
+    <type name="Magento\Elasticsearch\SearchAdapter\ResponseFactory">
+        <plugin disabled="false" sortOrder="2" name="gaiterjones_elasticsearch_queryresultsdebug" type="Gaiterjones\Elasticsearch\Plugin\QueryResultsDebug"/>
+    </type>
+    <type name="Magento\Elasticsearch\Model\Adapter\Index\Builder">
+	    <plugin disabled="false" sortOrder="3" name="gaiterjones_elasticsearch_indexbuilder" type="Gaiterjones\Elasticsearch\Plugin\IndexBuilder"></plugin>
+	</type>
+</config>
